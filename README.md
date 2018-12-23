@@ -33,11 +33,14 @@ The process of setting up the colors involves taking screenshots of the colored 
 
 First lets take a few screenshots of our hand with the tape attached. Make sure you get a range of positions to ensure you are less prone to color detection errors due to lighting conditions in you scene.
 
+<img src="/VMpics/greentape_example.jpg" alt="drawing" width="500"/>
 
 Simplifying this to isolate the relevant color would result in the following.
 
+<img src="/VMpics/greentape_cropped_sample.jpg" alt="drawing" width="300"/>
 
-Place this file in the following directory relative to the directory that SENVirtualMouse.py is in: /hand/color1/COLOR1_final.jpg
+Place this file in the following directory relative to the directory that SENVirtualMouse.py is in: 
+/hand/color1/COLOR1_final.jpg
 We then acquire a histogram and display this histogram using matplotlib. The Y-axis is Hue and the X-axis is saturation.
 
 In SENVirtualMouse.py the line to show the color histograms is commented out (in line 165). You can identify and plot the histogram using the code shown below.
