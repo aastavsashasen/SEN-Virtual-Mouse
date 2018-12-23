@@ -43,6 +43,8 @@ Place this file in the following directory relative to the directory that SENVir
 /hand/color1/COLOR1_final.jpg
 We then acquire a histogram and display this histogram using matplotlib. The Y-axis is Hue and the X-axis is saturation.
 
+<img src="/VMpics/histogram_sample.jpg" alt="drawing" width="1000"/>
+
 In SENVirtualMouse.py the line to show the color histograms is commented out (in line 165). You can identify and plot the histogram using the code shown below.
 ```
 roi = cv2.imread("hand/color1/COLOR1_final.jpg")
@@ -53,10 +55,13 @@ plt.figure("Color1")
 plt.imshow(roi_hist)
 plt.show()
 ```
-We now attempt to box this color to a certain extent in hopes to further reduce error. This is done in lines 152 and 158. However, if this bounding is too 'generous' expect a lot of error due to activation of irrelevant background colors and/or shadows. This process is essentially a trial and error. A resulting box of the 
+We now attempt to box this color to a certain extent in hopes to further reduce error. This is done in lines 152 and 158. However, if this bounding is too 'generous' expect a lot of error due to activation of irrelevant background colors and/or shadows. This process is essentially a trial and error. The result is shown below:
+
+<img src="/VMpics/histogram_sample_adjusted.jpg" alt="drawing" width="1000"/>
 
 I advise that you do the same for your background. Comparing the background histogram and the color1 and color2 histograms to make sure they do not clash.
 
+<img src="/VMpics/Background_and_hist.jpg" alt="drawing" width="700"/>
 
-I could not help it, I had to smile. In this case you can clearly see that our color1 stand on its own compared to the background, thus is a good choice for a color to track and control the mouse.
+I could not help it, I had to smile. Although it may be a little difficult to see, in this case you can clearly see that our color1 stand on its own compared to the background, thus is a good choice for a color to track and control the mouse. The background (including me) seems to consist of low hue and saturation values (off-white yellow/orange/red colors).
 
