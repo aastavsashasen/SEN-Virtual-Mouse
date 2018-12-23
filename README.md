@@ -59,6 +59,12 @@ We now attempt to box this color to a certain extent in hopes to further reduce 
 
 <img src="/VMpics/histogram_sample_adjusted.jpg" alt="drawing" width="1000"/>
 
+This is done by adding the following line to the aformentioned code:
+
+```
+roi_hist[73:92, 81:256] = 255
+```
+
 I advise that you do the same for your background. Comparing the background histogram and the color1 and color2 histograms to make sure they do not clash.
 
 <img src="/VMpics/Background_and_hist.jpg" alt="drawing" width="600"/>
