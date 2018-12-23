@@ -24,6 +24,12 @@ pip install matplotlib
 pip install imutils
 pip install scipy
 ```
+You will also need to get the Haar Cascade to detect the front facing open hand. You can get this here:
+https://github.com/OAID/CVGesture
+
+The name of the file we need is: palm_v4.xml
+
+Put this in the same directory as SENVirtualMouse.py
 
 ### Set-Up
 
