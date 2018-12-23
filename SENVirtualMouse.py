@@ -127,7 +127,7 @@ class CentroidTracker():
         return self.objects
 # --------------------------------------------------------------------------
 ct = CentroidTracker()  # activate the centroid tracker
-palm2_cascade = cv2.CascadeClassifier("haarcascade/handcascade/palm_v4.xml")
+palm2_cascade = cv2.CascadeClassifier("palm_v4.xml")
 # You can get the cascade here: https://github.com/OAID/CVGesture. The file is: palm_v4.xml
 
 # HAND ROI, we actually don't use this, it's for potential masking in an updated version (coming soon...)
