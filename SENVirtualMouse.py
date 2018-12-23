@@ -145,17 +145,17 @@ palm2_cascade = cv2.CascadeClassifier("haarcascade/handcascade/palm_v4.xml")
 # Also notice in line 150 & 156 I increase the tolerance for these specific colors, do this yourself depending on the
 # relevant histograms
 # GREEN TAPE ROI
-roi_greentape = cv2.imread("hand/greentape/greentape_final.jpg")
+roi_greentape = cv2.imread("hand/color1/COLOR1_final.jpg")
 hsv_roi_greentape = cv2.cvtColor(roi_greentape, cv2.COLOR_BGR2HSV)
 hue_g, saturation_g, value_g = cv2.split(hsv_roi_greentape)
 roi_hist_greentape = cv2.calcHist([hsv_roi_greentape], [0, 1], None, [180, 256], [1, 180, 0, 256])
-roi_hist_greentape[45:100, 60:256] = 255  # increasing our tolerance for the specific color
+roi_hist_greentape[45:100, 60:256] = 255  # increasing our tolerance for the mouse move color
 # BLUE TAPE ROI
-roi_b = cv2.imread("hand/blue2/blue_final.jpg")
+roi_b = cv2.imread("hand/color2/COLOR2_final.jpg")
 hsv_roi_b = cv2.cvtColor(roi_b, cv2.COLOR_BGR2HSV)
 hue_b, saturation_b, value_b = cv2.split(hsv_roi_b)
 roi_hist_b = cv2.calcHist([hsv_roi_b], [0, 1], None, [180, 256], [1, 180, 0, 256])
-roi_hist_b[105:140, 30:256] = 255
+roi_hist_b[105:140, 30:256] = 255  # increasing our tolerance for the mouse click color
 
 
 plt.figure("blue")
