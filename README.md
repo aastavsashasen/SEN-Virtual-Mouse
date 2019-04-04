@@ -77,8 +77,3 @@ I advise that you do the same for your background. Comparing the background hist
 
 I could not help it, I had to smile. Although it may be a little difficult to see, in this case you can clearly see that our color1 stands on its own compared to the background, thus is a good choice for a color to track and control the mouse. The background (including me) seems to consist of low hue and saturation values (off-white yellow/orange/red colors).
 
-## Code Walkthrough
-
-Here we will attempt to get a better understanding of the code and what the various sections are doing.
-
-Work in progress.....
